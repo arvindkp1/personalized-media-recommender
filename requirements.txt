@@ -1,0 +1,6 @@
+Requirements
+
+1. Front - End should be sleek, maybe minimal if not good
+2. It should actually work
+3. The API should be connected for the datasets to load, try to make it not case sensitive, (spelling mistakes must also be allowed) < - optional
+4. 
