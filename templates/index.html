@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Recommender</title>
+</head>
+<body>
+    <h1>Media Recommender</h1>
+    <form method="POST">
+        <label for="title">Enter a movie title:</label>
+        <input type="text" id="title" name="title" required>
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if title %}
+        <h2>Recommendations for "{{ title }}":</h2>
+        <ul>
+            {% for rec in recommendations %}
+                <li>{{ rec.title }} ({{ rec.genre }}) - Score: {{ rec.score }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
